@@ -49,11 +49,11 @@ router.post("/", async (req, res) => {
   // create a new tag
   try {
     console.log("==Create a New Tag==");
-    const tagData = Tag.create({ 
+    const tagData = await Tag.create({ 
       tag_name: req.body.tag_name
     });
     res.status(200)
-       .json([tagData, { message: "Tag has been added." }]);
+       .json([tagData.dataValues, { message: "Tag has been added." }]);
   }
   catch {
     console.log(err)
@@ -75,7 +75,7 @@ router.put("/:id", async (req, res) => {
       return;
     }
     res.status(200)
-       .json(tagData);
+       .json(tagData.dataValues);
   }
   catch (err) {
     console.log(err);

@@ -50,11 +50,11 @@ router.post("/", async (req, res) => {
   // create a new category
   try {
     console.log("==Create a New Category==");
-    const catData = Category.create({ 
+    const catData = await Category.create({ 
       category_name: req.body.category_name
     });
     res.status(200)
-       .json([catData, { message: "Category has been added." }]);
+       .json([catData.dataValues, { message: "Category has been added." }]);
   }
   catch {
     console.log(err)
@@ -76,7 +76,7 @@ router.put("/:id", async (req, res) => {
       return;
     }
     res.status(200)
-       .json(catData);
+       .json(catData.dataValues);
   }
   catch (err) {
     console.log(err);
