@@ -67,7 +67,7 @@ router.put("/:id", async (req, res) => {
   // update a category by its `id` value
   try {
     console.log("==Update an existing Category==");
-    const catData = await Category.update(req.body.category_name, { 
+    const catData = await Category.update(req.body, { 
       where: { id: req.params.id }
     });
     if (!catData) {
@@ -76,7 +76,7 @@ router.put("/:id", async (req, res) => {
       return;
     }
     res.status(200)
-       .json(catData.dataValues);
+       .json(catData);
   }
   catch (err) {
     console.log(err);

@@ -17,18 +17,15 @@ refer to LICENSE in repo.
 
 ## Credits
 
-Assistance from TA on modularizing returning values from DB inline an inquirer question
-
 
 ## screenshots
 
 ![front page](assets/home.png)
 
-![video of App](assets/walkthru.webm)
+![video Get Request](assets/get-request.webm)
 
+![video Post Request](assets/post-request.webm)
 
 
 
 ## To-Do's
-
-add delete of role, department and employee
