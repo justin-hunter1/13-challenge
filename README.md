@@ -2,7 +2,8 @@
 
 ## Description
 
-Is a Employee tracking application that allows an individual to manage employee information (specifically, their role, department, salary and who their manager is).
+Is a e-commerce website that allows manger to view product, categories and related tags for items.  
+It also allows them to add items as well as update and delete items from the back-end DB.
 
 
 ## Installation
